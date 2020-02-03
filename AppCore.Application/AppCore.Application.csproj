@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="AutoMapper\" />
+    <Folder Include="Content\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Ktxs\" />
+    <Folder Include="SmartOffices\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Collection" Version="6.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppCore.Data.EF\AppCore.Data.EF.csproj" />
+    <ProjectReference Include="..\AppCore.Data\AppCore.Data.csproj" />
+    <ProjectReference Include="..\AppCore.Infrastructure\AppCore.Infrastructure.csproj" />
+    <ProjectReference Include="..\AppCore.Utilities\AppCore.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
