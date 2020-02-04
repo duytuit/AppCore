@@ -90,7 +90,11 @@ namespace AppCore.Data.EF
 
         public IQueryable<TEntity> GetAll(bool isAll = true)
         {
-            throw new NotImplementedException();
+            if (typeof(TEntity) is IHasSoftDelete && isAll == false)
+            {
+                return DbContext.Set<TEntity>().Where(x => ((IHasSoftDelete)x).Dahuy == false).AsQueryable();
+            }
+            return DbContext.Set<TEntity>().AsQueryable();
         }
 
         public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate, bool isAll = true)

@@ -9,8 +9,10 @@
     <PackageReference Include="AutoMapper.Collection" Version="6.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.1" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.1" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
@@ -38,7 +40,6 @@
     <Folder Include="Controllers\Systems\Sys004s\" />
     <Folder Include="Controllers\Systems\Sys003s\" />
     <Folder Include="Controllers\Systems\Sys002s\" />
-    <Folder Include="Controllers\Systems\Sys001s\" />
     <Folder Include="Models\" />
   </ItemGroup>
 
