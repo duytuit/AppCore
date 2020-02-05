@@ -61,14 +61,19 @@ namespace WebApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+              
             }
+            //else
+            //{
+            //   app.UseExceptionHandler("/home/error");
+            //}
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
-
+            //app.UseCookiePolicy();
             app.UseAuthentication();
            // app.UseMvc();
           //  app.UseSwagger();

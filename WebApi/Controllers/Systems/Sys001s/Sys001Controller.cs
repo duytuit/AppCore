@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
-using AppCore.Application.Systems.Sys001s;
-using Microsoft.AspNetCore.Http;
+﻿using AppCore.Application.Systems.Sys001s;
+using AppCore.Data.EF;
+using AppCore.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace WebApi.Controllers.Systems.Sys001s
 {
@@ -17,30 +11,26 @@ namespace WebApi.Controllers.Systems.Sys001s
     public class Sys001Controller : ControllerBase
     {
         private readonly ISys001Service _Sys001Service;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public Sys001Controller(ISys001Service sys001Service)
+        public Sys001Controller(ISys001Service sys001Service, IUnitOfWork unitOfWork)
         {
             _Sys001Service = sys001Service;
+            _unitOfWork = unitOfWork;
         }
+
         [Route("GetAppUser")]
         [HttpGet]
-        public HttpResponseMessage GetAppUser()
+        public IActionResult GetAppUser()
         {
             try
             {
-               
-                    var response = new HttpResponseMessage(HttpStatusCode.OK);
-
-                    var query = _Sys001Service.GetAll();
-                    response.Content = new StringContent(JsonConvert.SerializeObject(query));
-                    response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                    return response;
-             
-
+                var query = _Sys001Service.GetAll();
+                return Ok(query);
             }
             catch
             {
-                return new HttpResponseMessage(HttpStatusCode.BadRequest);
+                return BadRequest();
             }
         }
     }

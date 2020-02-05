@@ -10,6 +10,9 @@ namespace AppCore.Infrastructure.Interfaces
         /// <summary>
         /// Commits the changes to the underlying data store. 
         /// </summary>
+        public void BeginTransaction();
+        public void TransactionCommit();
+        public void Rollback();
         Task Commit();
     }
 }
