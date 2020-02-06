@@ -18,12 +18,12 @@ namespace AppCore.Data.EF
         }
         public EFUnitOfWork(AppDbContext appDbContext)
         {
-            this._appDbContext = appDbContext;
+           _appDbContext = appDbContext;
         }
 
-        public async Task Commit()
+        public void Commit()
         {
-            await this._appDbContext.SaveChangesAsync();
+              _appDbContext.SaveChanges();
         }
         public void TransactionCommit()
         {
@@ -36,7 +36,7 @@ namespace AppCore.Data.EF
         }
         public void Dispose()
         {
-            this._appDbContext.Dispose();
+            _appDbContext.Dispose();
         }
     }
 }

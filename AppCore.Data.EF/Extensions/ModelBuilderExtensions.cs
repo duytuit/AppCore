@@ -16,7 +16,7 @@ namespace AppCore.Data.EF.Extensions
             Guid getguiddanhmuc = Guid.NewGuid();
             Guid getguiduser = Guid.NewGuid();
             modelBuilder.Entity<Sys001>().HasData(
-             new Sys001() { Id = getguiduser, Manhanvien = "890801", Hovaten = "Admin", Password = "duytuit89!", Ngaysinh = DateTime.Now.ToString("yyyy-MM-dd HH:mm"), Ngaytao = DateTime.Now }
+             new Sys001() { Id = getguiduser, Manhanvien = "890801", Hovaten = "Admin", Password = "duytuit89!", Ngaysinh = DateTime.Now.Date, Ngaytao = DateTime.Now }
              );
             modelBuilder.Entity<Sys002>().HasData(
                 new Sys002() { Id = getguidnhomky, Tennhom = "Quản trị", Kieunhom = 1, Trangthai = Status.Actived }

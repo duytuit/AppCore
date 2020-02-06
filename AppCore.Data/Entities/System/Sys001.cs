@@ -17,7 +17,7 @@ namespace AppCore.Data.Entities.System
         }
 
         public Sys001(string manhanvien, string hovaten, string email, string sodienthoai, string username, string password,
-            string anhdaidien, string diachi, string ngaysinh, string cMTND, int kieuuser, int capbac, string chucvu,
+            string anhdaidien, string diachi, DateTime ngaysinh, string cMTND, int kieuuser, int capbac, string chucvu,
             DateTime ngaytao, DateTime? ngaycapnhap, DateTime? ngayhuy, DateTime? ngayhoanthanh, Status trangthai)
         {
             Manhanvien = manhanvien;
@@ -54,8 +54,7 @@ namespace AppCore.Data.Entities.System
         public string Password { get; set; }
         public string Anhdaidien { get; set; }
         public string Diachi { get; set; }
-        [Required]
-        public string Ngaysinh { get; set; }
+        public DateTime Ngaysinh { get; set; }
         public string CMTND { get; set; }
         public int Kieuuser { get; set; }
         public int Capbac { get; set; }

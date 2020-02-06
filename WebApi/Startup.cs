@@ -31,16 +31,17 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-             services.AddDbContext<AppDbContext>(options =>
+          
+            services.AddDbContext<AppDbContext>(options =>
              options.UseSqlServer(Configuration.GetConnectionString("AppDbConnection")));
             services.AddControllers();
             //  services.AddMvc();
-            //services.AddCors(o => o.AddPolicy("AppCoreCorsPolicy", builder =>
-            //{
-            //    builder.AllowAnyOrigin()
-            //        .AllowAnyMethod()
-            //        .AllowAnyHeader();
-            //}));
+            services.AddCors(o => o.AddPolicy("AppCoreCorsPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            }));
             //  services.AddAutoMapper();
             // services.AddSingleton(Mapper.Configuration);
             //   services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
@@ -71,11 +72,11 @@ namespace WebApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseAuthorization();
+            app.UseCors("AppCoreCorsPolicy");
+            //  app.UseAuthorization();
             //app.UseCookiePolicy();
             app.UseAuthentication();
-           // app.UseMvc();
+           
           //  app.UseSwagger();
             app.UseStaticFiles();
             app.UseEndpoints(endpoints =>

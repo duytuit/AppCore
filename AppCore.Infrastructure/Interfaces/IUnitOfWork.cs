@@ -13,6 +13,6 @@ namespace AppCore.Infrastructure.Interfaces
         public void BeginTransaction();
         public void TransactionCommit();
         public void Rollback();
-        Task Commit();
+        public void Commit();
     }
 }

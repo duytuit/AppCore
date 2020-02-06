@@ -1,4 +1,5 @@
-﻿using AppCore.Application.Systems.Sys001s.Dtos;
+﻿using AppCore.Application.Helpers;
+using AppCore.Application.Systems.Sys001s.Dtos;
 using AppCore.Data.EF;
 using AppCore.Data.Entities.System;
 using AppCore.Infrastructure.Enums;
@@ -23,9 +24,29 @@ namespace AppCore.Application.Systems.Sys001s
             _Sys001Repository = repository;
             _unitOfWork = unitOfWork;
         }
-        //public void Dispose()
-        //{
-        //    GC.SuppressFinalize(this);
-        //}
+        public override void Add(Sys001 sys001)
+        {
+            string depass = helper.Encrypt("T", sys001.Password);
+            var data = new Sys001()
+            {
+                //Id=Guid.NewGuid(),
+                Manhanvien = sys001.Manhanvien,
+                Hovaten = sys001.Hovaten,
+                Email = sys001.Email,
+                Sodienthoai = sys001.Sodienthoai,
+                Username = sys001.Username,
+                Password = depass,
+                Anhdaidien = sys001.Anhdaidien,
+                Diachi = sys001.Diachi,
+                Ngaysinh = DateTime.Now.Date,
+                Trangthai = sys001.Trangthai,
+                CMTND = sys001.CMTND,
+                Ngaytao = DateTime.Now,
+                Kieuuser = sys001.Kieuuser,
+                Chucvu = sys001.Chucvu,
+                Capbac = sys001.Capbac
+            };
+            _Sys001Repository.Insert(data);
+        }
     }
 }
