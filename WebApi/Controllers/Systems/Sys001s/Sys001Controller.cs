@@ -2,7 +2,8 @@
 using AppCore.Data.Entities.System;
 using AppCore.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApi.Controllers.Systems.Sys001s
 {
@@ -118,25 +119,26 @@ namespace WebApi.Controllers.Systems.Sys001s
         [HttpPost]
         public IActionResult Create(Sys001 user)
         {
-         
-            try
+            if (!ModelState.IsValid)
             {
-                if (!ModelState.IsValid)
-                {
-                    return new BadRequestObjectResult(ModelState);
-                }
-                else
+                return new BadRequestObjectResult(ModelState);
+            }
+            else
+            {
+                try
                 {
                     _Sys001Service.Add(user);
                     _Sys001Service.Save();
                     return Ok();
                 }
-               
-
-            }
-            catch
-            {
-                return BadRequest();
+                catch (ValidationException ex)
+                {
+                    return BadRequest(ex.InnerException);
+                }
+                catch (DbUpdateException ex)
+                {
+                    return BadRequest(ex.InnerException);
+                }
             }
         }
 
