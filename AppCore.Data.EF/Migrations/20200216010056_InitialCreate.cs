@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AppCore.Data.EF.Migrations
 {
-    public partial class create002 : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -293,49 +293,49 @@ namespace AppCore.Data.EF.Migrations
             migrationBuilder.InsertData(
                 table: "AppUsers",
                 columns: new[] { "Id", "Anhdaidien", "CMTND", "Capbac", "Chucvu", "Diachi", "Email", "Hovaten", "Kieuuser", "Manhanvien", "Ngaycapnhap", "Ngayhoanthanh", "Ngayhuy", "Ngaysinh", "Ngaytao", "Password", "Sodienthoai", "Trangthai", "Username" },
-                values: new object[] { new Guid("093d68c9-d02f-457a-b62f-0f067dcf4fcc"), null, null, 0, null, null, null, "Admin", 0, "890801", null, null, null, "2020-02-02 11:06", new DateTime(2020, 2, 2, 11, 6, 33, 856, DateTimeKind.Local).AddTicks(1657), "duytuit89!", null, 0, null });
+                values: new object[] { new Guid("cccc32c6-31ff-4f39-b55a-67b4c75bc3c8"), null, null, 0, null, null, null, "Admin", 0, "890801", null, null, null, "2020-02-16 08:00", new DateTime(2020, 2, 16, 8, 0, 55, 615, DateTimeKind.Local).AddTicks(6524), "duytuit89!", null, 0, null });
 
             migrationBuilder.InsertData(
                 table: "DanhMucs",
                 columns: new[] { "Id", "Madanhmuc", "Tendanhmuc", "Thutu", "Trangthai" },
-                values: new object[] { new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"), "DM01", "Quản Trị", 1, 1 });
+                values: new object[] { new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"), "DM01", "Quản Trị", 1, 1 });
 
             migrationBuilder.InsertData(
                 table: "NhomKys",
                 columns: new[] { "Id", "Ghichu", "Kieunhom", "Ngaycapnhap", "Ngayhoanthanh", "Ngayhuy", "Ngaytao", "Nguoitao", "Nguoitaoid", "Tennhom", "Trangthai" },
-                values: new object[] { new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"), null, 1, null, null, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Quản trị", 1 });
+                values: new object[] { new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"), null, 1, null, null, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Quản trị", 1 });
 
             migrationBuilder.InsertData(
                 table: "Menus",
                 columns: new[] { "Id", "Capdo", "Danhmucid", "Duongdan", "Icon", "Idcha", "Macode", "Tenmenu", "Thutu", "Trangthai" },
                 values: new object[,]
                 {
-                    { "ht01", 1, new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"), "thongtin", null, null, null, "Quản trị", 1, 1 },
-                    { "ht02", 3, new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"), "menu", null, "ht01", null, "Menu", 2, 1 },
-                    { "ht03", 3, new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"), "danhmuc", null, "ht01", null, "Danh mục", 3, 1 },
-                    { "ht04", 3, new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"), "nhomky", null, "ht01", null, "Nhóm ký", 4, 1 },
-                    { "ht05", 3, new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"), "trinhky", null, "ht01", null, "Trình ký", 5, 1 },
-                    { "ht06", 3, new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"), "phanquyen", null, "ht01", null, "Phân quyền", 6, 1 },
-                    { "ht07", 3, new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"), "usernhom", null, "ht01", null, "User - nhóm", 7, 1 }
+                    { "ht01", 1, new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"), "thongtin", null, null, null, "Quản trị", 1, 1 },
+                    { "ht02", 3, new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"), "menu", null, "ht01", null, "Menu", 2, 1 },
+                    { "ht03", 3, new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"), "danhmuc", null, "ht01", null, "Danh mục", 3, 1 },
+                    { "ht04", 3, new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"), "nhomky", null, "ht01", null, "Nhóm ký", 4, 1 },
+                    { "ht05", 3, new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"), "trinhky", null, "ht01", null, "Trình ký", 5, 1 },
+                    { "ht06", 3, new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"), "phanquyen", null, "ht01", null, "Phân quyền", 6, 1 },
+                    { "ht07", 3, new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"), "usernhom", null, "ht01", null, "User - nhóm", 7, 1 }
                 });
 
             migrationBuilder.InsertData(
                 table: "UserNhomKy",
                 columns: new[] { "Id", "Email", "Manhanvien", "Nhomky_id", "Tennhomky", "Trangthai", "UserID", "Username" },
-                values: new object[] { new Guid("edc08678-09f6-4de6-ad41-a1daaa5e3ce2"), null, "890801", new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"), "Quản trị", 1, new Guid("093d68c9-d02f-457a-b62f-0f067dcf4fcc"), "Admin" });
+                values: new object[] { new Guid("cd684742-e4d7-4eba-99a6-f950ad003c2a"), null, "890801", new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"), "Quản trị", 1, new Guid("cccc32c6-31ff-4f39-b55a-67b4c75bc3c8"), "Admin" });
 
             migrationBuilder.InsertData(
                 table: "PhanQuyens",
                 columns: new[] { "Id", "Menuid", "Nhomky_id", "quyenCapNhap", "quyenThem", "quyenXem", "quyenXoa" },
                 values: new object[,]
                 {
-                    { new Guid("df32a9e5-ed11-48a3-a7d6-f8e16198d2d0"), "ht01", new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"), false, false, false, false },
-                    { new Guid("013d2c92-b78f-43d8-9220-ace94411288b"), "ht02", new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"), false, false, false, false },
-                    { new Guid("779963f9-e9b1-41ba-a05b-65d054838918"), "ht03", new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"), false, false, false, false },
-                    { new Guid("c66759c2-1070-4dc6-8e3d-2f1f4a6ec02f"), "ht04", new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"), false, false, false, false },
-                    { new Guid("24a6c212-c316-4fcd-ad11-d1db9eba81bc"), "ht05", new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"), false, false, false, false },
-                    { new Guid("0c3b6db7-06a8-4292-ae72-46587f57789f"), "ht06", new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"), false, false, false, false },
-                    { new Guid("09a4765f-611a-42fc-acad-f42e48348d2e"), "ht07", new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"), false, false, false, false }
+                    { new Guid("ea0c011b-c2a7-4ce3-b525-28cad80eecca"), "ht01", new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"), false, false, false, false },
+                    { new Guid("88a1ca5d-3035-48f5-bd17-1e36bde16cfa"), "ht02", new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"), false, false, false, false },
+                    { new Guid("2bcde03e-ceb3-4516-b2b7-91f52c9da0da"), "ht03", new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"), false, false, false, false },
+                    { new Guid("2e80f950-4569-4456-88ad-94074779dbce"), "ht04", new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"), false, false, false, false },
+                    { new Guid("b6b0da13-b226-438b-847b-3344e59d9277"), "ht05", new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"), false, false, false, false },
+                    { new Guid("898554f7-5fde-4f73-a87c-35146f27969c"), "ht06", new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"), false, false, false, false },
+                    { new Guid("fc5e5eee-07c2-4ef9-a1e3-588ff19bf91e"), "ht07", new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"), false, false, false, false }
                 });
 
             migrationBuilder.CreateIndex(

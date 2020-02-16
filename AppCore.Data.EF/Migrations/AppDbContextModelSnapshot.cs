@@ -146,13 +146,13 @@ namespace AppCore.Data.EF.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("093d68c9-d02f-457a-b62f-0f067dcf4fcc"),
+                            Id = new Guid("cccc32c6-31ff-4f39-b55a-67b4c75bc3c8"),
                             Capbac = 0,
                             Hovaten = "Admin",
                             Kieuuser = 0,
                             Manhanvien = "890801",
-                            Ngaysinh = "2020-02-02 11:06",
-                            Ngaytao = new DateTime(2020, 2, 2, 11, 6, 33, 856, DateTimeKind.Local).AddTicks(1657),
+                            Ngaysinh = "2020-02-16 08:00",
+                            Ngaytao = new DateTime(2020, 2, 16, 8, 0, 55, 615, DateTimeKind.Local).AddTicks(6524),
                             Password = "duytuit89!",
                             Trangthai = 0
                         });
@@ -208,7 +208,7 @@ namespace AppCore.Data.EF.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"),
+                            Id = new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"),
                             Kieunhom = 1,
                             Ngaytao = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Tennhom = "Quản trị",
@@ -323,7 +323,7 @@ namespace AppCore.Data.EF.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"),
+                            Id = new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"),
                             Madanhmuc = "DM01",
                             Tendanhmuc = "Quản Trị",
                             Thutu = 1,
@@ -374,7 +374,7 @@ namespace AppCore.Data.EF.Migrations
                         {
                             Id = "ht01",
                             Capdo = 1,
-                            Danhmucid = new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"),
+                            Danhmucid = new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"),
                             Duongdan = "thongtin",
                             Tenmenu = "Quản trị",
                             Thutu = 1,
@@ -384,7 +384,7 @@ namespace AppCore.Data.EF.Migrations
                         {
                             Id = "ht02",
                             Capdo = 3,
-                            Danhmucid = new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"),
+                            Danhmucid = new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"),
                             Duongdan = "menu",
                             Idcha = "ht01",
                             Tenmenu = "Menu",
@@ -395,7 +395,7 @@ namespace AppCore.Data.EF.Migrations
                         {
                             Id = "ht03",
                             Capdo = 3,
-                            Danhmucid = new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"),
+                            Danhmucid = new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"),
                             Duongdan = "danhmuc",
                             Idcha = "ht01",
                             Tenmenu = "Danh mục",
@@ -406,7 +406,7 @@ namespace AppCore.Data.EF.Migrations
                         {
                             Id = "ht04",
                             Capdo = 3,
-                            Danhmucid = new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"),
+                            Danhmucid = new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"),
                             Duongdan = "nhomky",
                             Idcha = "ht01",
                             Tenmenu = "Nhóm ký",
@@ -417,7 +417,7 @@ namespace AppCore.Data.EF.Migrations
                         {
                             Id = "ht05",
                             Capdo = 3,
-                            Danhmucid = new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"),
+                            Danhmucid = new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"),
                             Duongdan = "trinhky",
                             Idcha = "ht01",
                             Tenmenu = "Trình ký",
@@ -428,7 +428,7 @@ namespace AppCore.Data.EF.Migrations
                         {
                             Id = "ht06",
                             Capdo = 3,
-                            Danhmucid = new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"),
+                            Danhmucid = new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"),
                             Duongdan = "phanquyen",
                             Idcha = "ht01",
                             Tenmenu = "Phân quyền",
@@ -439,7 +439,7 @@ namespace AppCore.Data.EF.Migrations
                         {
                             Id = "ht07",
                             Capdo = 3,
-                            Danhmucid = new Guid("f65afc49-fd8d-4d98-8969-bc6cbc7b8e5c"),
+                            Danhmucid = new Guid("4a9d6d08-d27a-47ee-9871-440e4b552ecb"),
                             Duongdan = "usernhom",
                             Idcha = "ht01",
                             Tenmenu = "User - nhóm",
@@ -543,9 +543,9 @@ namespace AppCore.Data.EF.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("df32a9e5-ed11-48a3-a7d6-f8e16198d2d0"),
+                            Id = new Guid("ea0c011b-c2a7-4ce3-b525-28cad80eecca"),
                             Menuid = "ht01",
-                            Nhomky_id = new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"),
+                            Nhomky_id = new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"),
                             quyenCapNhap = false,
                             quyenThem = false,
                             quyenXem = false,
@@ -553,9 +553,9 @@ namespace AppCore.Data.EF.Migrations
                         },
                         new
                         {
-                            Id = new Guid("013d2c92-b78f-43d8-9220-ace94411288b"),
+                            Id = new Guid("88a1ca5d-3035-48f5-bd17-1e36bde16cfa"),
                             Menuid = "ht02",
-                            Nhomky_id = new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"),
+                            Nhomky_id = new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"),
                             quyenCapNhap = false,
                             quyenThem = false,
                             quyenXem = false,
@@ -563,9 +563,9 @@ namespace AppCore.Data.EF.Migrations
                         },
                         new
                         {
-                            Id = new Guid("779963f9-e9b1-41ba-a05b-65d054838918"),
+                            Id = new Guid("2bcde03e-ceb3-4516-b2b7-91f52c9da0da"),
                             Menuid = "ht03",
-                            Nhomky_id = new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"),
+                            Nhomky_id = new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"),
                             quyenCapNhap = false,
                             quyenThem = false,
                             quyenXem = false,
@@ -573,9 +573,9 @@ namespace AppCore.Data.EF.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c66759c2-1070-4dc6-8e3d-2f1f4a6ec02f"),
+                            Id = new Guid("2e80f950-4569-4456-88ad-94074779dbce"),
                             Menuid = "ht04",
-                            Nhomky_id = new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"),
+                            Nhomky_id = new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"),
                             quyenCapNhap = false,
                             quyenThem = false,
                             quyenXem = false,
@@ -583,9 +583,9 @@ namespace AppCore.Data.EF.Migrations
                         },
                         new
                         {
-                            Id = new Guid("24a6c212-c316-4fcd-ad11-d1db9eba81bc"),
+                            Id = new Guid("b6b0da13-b226-438b-847b-3344e59d9277"),
                             Menuid = "ht05",
-                            Nhomky_id = new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"),
+                            Nhomky_id = new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"),
                             quyenCapNhap = false,
                             quyenThem = false,
                             quyenXem = false,
@@ -593,9 +593,9 @@ namespace AppCore.Data.EF.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0c3b6db7-06a8-4292-ae72-46587f57789f"),
+                            Id = new Guid("898554f7-5fde-4f73-a87c-35146f27969c"),
                             Menuid = "ht06",
-                            Nhomky_id = new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"),
+                            Nhomky_id = new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"),
                             quyenCapNhap = false,
                             quyenThem = false,
                             quyenXem = false,
@@ -603,9 +603,9 @@ namespace AppCore.Data.EF.Migrations
                         },
                         new
                         {
-                            Id = new Guid("09a4765f-611a-42fc-acad-f42e48348d2e"),
+                            Id = new Guid("fc5e5eee-07c2-4ef9-a1e3-588ff19bf91e"),
                             Menuid = "ht07",
-                            Nhomky_id = new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"),
+                            Nhomky_id = new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"),
                             quyenCapNhap = false,
                             quyenThem = false,
                             quyenXem = false,
@@ -658,13 +658,13 @@ namespace AppCore.Data.EF.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("edc08678-09f6-4de6-ad41-a1daaa5e3ce2"),
+                            Id = new Guid("cd684742-e4d7-4eba-99a6-f950ad003c2a"),
                             Manhanvien = "890801",
-                            Nhomky_id = new Guid("73df7fbf-15af-4e3d-a4b9-9a4e107e8586"),
+                            Nhomky_id = new Guid("17b888f2-12d8-4cae-9fe3-7c0d53f157c4"),
                             Tennhomky = "Quản trị",
                             Thutu = 0,
                             Trangthai = 1,
-                            UserID = new Guid("093d68c9-d02f-457a-b62f-0f067dcf4fcc"),
+                            UserID = new Guid("cccc32c6-31ff-4f39-b55a-67b4c75bc3c8"),
                             Username = "Admin"
                         });
                 });
